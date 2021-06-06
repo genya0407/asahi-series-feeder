@@ -54,5 +54,5 @@ func main() {
 	e := echo.New()
 	e.GET("/series/rss/:id", handleRSS)
 	e.GET("/series/atom/:id", handleAtom)
-	e.Logger.Fatal(e.Start(fmt.Sprintf("localhost:%s", *port)))
+	e.Logger.Fatal(e.Start(fmt.Sprintf("0.0.0.0:%s", *port)))
 }
